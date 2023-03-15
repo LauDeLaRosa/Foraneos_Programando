@@ -1,4 +1,4 @@
-# Foraneos Programando
+# Foráneos Programando - Taller #1
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/124603892/225188078-0b83ef61-9a17-458d-aa7e-608587b3886c.png">
   <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/124603892/225188078-0b83ef61-9a17-458d-aa7e-608587b3886c.png">
@@ -86,3 +86,186 @@ if letra in consonantes:
 elif letra in vocales:
  print("La letra "+str(letra)+" es una vocal")
 ```
+
+## Ejercicio #7
+Escriba un programa que pida 5 números reales y calcule las siguientes operaciones:
+
+ + El promedio
+ + La mediana
+ + El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
+ + Ordenar los números de forma ascendente
+ + Ordenar los números de forma descendente
+ + La potencia del mayor número elevado al menor número
+ + La raíz cúbica del menor número
+
+Se piden 5 variables, que posteriormente se ponen en un conjunto donde puedo pedir el número máximo y mínimo, también se puede ordenar de manera de ascendente y descendente, las otras operaciones se hacen a través de su fórmula numérica. Los resultados los asigno, y al final unicamente imprimo las variables asignadas previamente.
+```pseudocode
+n1 = float(input("Ingresar número 1: "))
+n2 = float(input("Ingresar número 2: "))
+n3 = float(input("Ingresar número 3: "))
+n4 = float(input("Ingresar número 4: "))
+n5 = float(input("Ingresar número 5: "))
+numeros = [n1, n2, n3 , n4 , n5]
+menorMayor = sorted(numeros)
+mayorMenor = sorted(numeros, reverse=True)
+promedio = (n1+n2+n3+n4+n5)/5
+if len(numeros) % 2 == 0:
+    mediana = (numeros[len(numeros)//2] + numeros[len(numeros)//2 - 1]) / 2
+else:
+    mediana = numeros[len(numeros)//2]
+pmultiplicativo = (n1 * n2* n3 * n4 * n5)**0.2
+peque = min(numeros)
+grande = max(numeros)
+raiz = peque**1/3
+potencia = grande**peque
+print("el promedio aritmetico es  " + str(promedio))
+print("el promedio multiplicativo es " + str(pmultiplicativo))
+print("la mediana es " + str(mediana))
+print("de menor a mayor son " + str(menorMayor))
+print("de menor a mayor son " + str(mayorMenor))
+print("el mayor elevado al menor es " + str(potencia))
+print("la raiz cubica del menor es " + str(raiz))
+```
+
+## Ejercicio #8
+Escriba un programa al que se le ingrese la frecuencia de una onda en hz y como salida arroje en que parte del espectro electromagnético se encuentra. Asigno el nombre del área al que pertenece en _Hz_, y los intervalos a los que pertenece cierta frecuencia, desde frecuencia baja hasta rayos cósmicos, se pide un valor en _Hz_ y con el _if_ se establece a dónde va  a pertenecer con su respectivo _print_.
+```pseudocode
+x : float
+x = float(input("Ingresar frecuencia de onda en Hz: "))
+if x<=300 and x>=0:
+    print("frecuencias extremadamente bajas ")
+elif x > 300 and x <= 3e+6:
+    print("frecuencias bajas ")
+elif x > 3e+6  and x <= 3e+8:
+    print("Radiofrecuencias ")
+elif x > 3e+8 and x <= 3e+10:
+    print("Micro-ondas ")
+elif x > 3e+10 and x <= 3e+11:
+    print("Micro-ondas de muy alta frecuencia")
+elif x > 3e+11 and x <= 4.3e+14:
+    print("Ondas infrarrojas")
+elif x > 4.3e+14 and x <= 7.7e+14:
+    print("Luz visible")
+elif x > 7.7e+14 and x <= 3e+16:
+    print("Radiación ultravioleta")
+elif x > 3e+16 and x <= 1e+19:
+    print("Radiación ultravioleta")
+elif x > 1e+19 and x <= 3e+22:
+    print("Radiación ultravioleta")
+elif x > 1e+22 and x <= 1e+25:
+    print("Rayos cósmicos")
+elif x > 1e+25:
+    print("Rayos cósmicos muy energeticos ")
+else:
+    print("como tienes frecuencia negativa???")
+```
+
+## Ejercicio #9
+Escriba un programa que reciba el nombre en minúsculas de un país de America y retorne la ciudad capital, si el país no pertenece al continente debe arrojar país no identificado. Este proceso es más sencillo debido a que por el _lang_ establezco que para cada caso haya una respuesta, y en caso de ser una distinta, imprimir el mensaje _"país no identificado"_, entonces se pedirá un país en minúscula y se imprimirá el resultado.
+```pseudocode
+lang = input("ingrese país de america en minuscula ")
+match lang:
+  case "argentina":
+    print("buenos aires")
+  case "antigua y barbuda":
+    print("saint john")
+  case "bahamas":
+    print("Nasáu")
+  case "barbados":
+    print(" Bridgetown")
+  case "belice":
+    print("Belmopán")
+  case "bolivia":
+    print(" Sucre")
+  case "brasil":
+    print("Brasilia")
+  case "canada":
+    print("Ottawa")
+  case "chile":
+    print("Santiago")
+  case "colombia":
+    print("bogotá")
+  case "costa rica":
+    print("San José")
+  case "cuba":
+    print("La Habana")
+  case "dominica":
+    print("Roseau")
+  case "ecuador":
+    print("Quito")
+  case "el salvador":
+    print("San Salvador")
+  case "estados unidos":
+    print("Washington D. C.")
+  case "granada":
+    print("Saint George")
+  case "guatemala":
+    print("Ciudad de Guatemala")
+  case "guyana":
+    print("Georgetown")
+  case "haiti":
+    print("Puerto Príncipe")
+  case "honduras":
+    print("Tegucigalpa")
+  case "jamaica":
+    print("Kingston")
+  case "mexico":
+    print("Ciudad de México")
+  case "nicaragua":
+    print("Managua")
+  case "panama":
+    print("Ciudad de Panamá")
+  case "paraguay":
+    print("Asunción")
+  case "peru":
+    print("lima")
+  case "republica dominicana":
+    print("Santo Domingo")
+  case "san cristobal y nieves":
+    print("Basseterre")
+  case "san vicente y las granadinas":
+    print("Kingstown")
+  case "santa lucia":
+    print("Castries")
+  case "surinam":
+    print("Paramaribo")
+  case "trinidad y tobago":
+    print("Puerto España")
+  case "uruguay":
+    print("montevideo")
+  case "venezuela":
+    print("caracas")
+  case _:
+    print("país no identificado")
+```
+
+## Ejercicio #10
+Escriba un programa que dada una distancia calcule:
+
+ + El tiempo que le tomaría a la luz recorrer la distancia.
+ + El tiempo que le tomaría al sonido (en el aire) recorrer la distancia.
+ + El tiempo que le tomaría al vehiculo comercial más veloz recorrer la distancia.
+ + El tiempo que le tomaría a Bolt recorrer la distancia.
+ 
+ Se establecen las velocidades de dichas cosas que se evalúan, se pide una una distancia y se hace con cada velocidad el cálculo, posteriormente, se da el resultado con cada una de las velocidades.
+ ```pseudocode
+ Vluz : float
+Vsonido : float
+Vauto : float
+Vbolt : float
+Vluz : float = 2.998e+8
+Vsonido : float = 343
+Vauto : float = 141.11
+Vbolt : float = 12.4
+x : float
+x=float(input("introduzca una dsitancia en metros: " ))
+tiempo:float
+a = x/Vluz
+b = x/Vsonido
+c = x/Vauto
+d = x/Vbolt
+print("tarda la luz " + str(a) + " segundos")
+print("tarda el sonido " + str(b) + " segundos")
+print("tarda el auto " + str(c) + " segundos")
+print("tarda bolt " + str(d) + " segundos")
+ ```
