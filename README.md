@@ -11,7 +11,7 @@ A continuación evidencia del puntaje de más del 90% en el Python Beginner Quiz
 Quiz de Laura De La Rosa:
 ![image](https://user-images.githubusercontent.com/124603892/225186814-31bf9893-43d8-4243-97ea-5da22a8d3630.png)
 
-Quiz de Bryan Ortiz:
+Quiz de Brayan Ortiz:
 ![image](https://user-images.githubusercontent.com/124603892/225204130-4540f0a1-ddb8-4149-a4ea-277965826a03.png)
 
 ## Ejercicio #2
